@@ -1,2 +1,34 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1 class="Books">Books</h1>
+
+<div class="main">
+  
+  <div class="title">
+    
+    <P class="title-text">Title</P>
+    <% @books.each do |b| %>
+      <div class="title-box">
+        <span class="title-comment"><% b.title %></span>
+      </div>
+    <% end %>
+      
+  </div>
+  
+  
+  <div class="body">Body</div>
+  
+  
+</div>
+
+<h3 class="New">New book</h3>
+
+<div class="new-box">
+  <%= form_with model: @books.new do |f| %>
+    <p>Title</p>
+    <%= f.text_field :title %>
+    
+    <p>Body</p>
+    <%= f.text_area :body %>
+    <p></p>
+    <%= f.submit 'Create Book' %>
+  <% end %>
+</div>

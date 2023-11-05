@@ -1,3 +1,44 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Books{
+  margin-left: 40px;
+}
+
+.main{
+  margin:0 0;
+  display: flex;
+  flex-box:inline-block;
+}
+
+.title{
+  width: 180px;
+  height: 300px;
+  margin-left: 40px;
+  text-align: center;
+  font-weight: bold;
+  background-color: red;
+}
+
+.body{
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  font-weight: bold;
+  background-color: blue;
+}
+
+.New{
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.new-box{
+  margin-left: 40px;
+}
