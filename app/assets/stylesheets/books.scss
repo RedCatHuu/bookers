@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+ body {
+     a:hover { color:white; text-decoration:none }
+ }
+
 .Books{
   margin-left: 40px;
 }
@@ -19,26 +23,50 @@
 
 .title{
   width: 180px;
-  height: 300px;
   margin-left: 40px;
   text-align: center;
   font-weight: bold;
   background-color: red;
 }
 
+.title-box{
+  width: 100px;
+  height: 30px;
+  background-color: pink;
+}
+
+.title-comment{
+  background-color: pink;
+}
+
 .body{
   width: 400px;
-  height: 300px;
   text-align: center;
   font-weight: bold;
   background-color: blue;
 }
 
-.New{
-  margin-top: 30px;
-  margin-left: 40px;
+.show{
+  margin: 0 20px;
 }
 
-.new-box{
-  margin-left: 40px;
+.edit{
+  margin-right: 20px;
+  background-color: red;
+}
+
+
+.New{
+  margin: 30px 0 50px 40px;
+}
+
+
+// show
+.show-contents{
+  margin: 40px;
+  
+}
+
+.button:hover{
+  background-color: black;
 }

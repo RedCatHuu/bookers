@@ -6,29 +6,60 @@
     
     <P class="title-text">Title</P>
     <% @books.each do |b| %>
-      <div class="title-box">
-        <span class="title-comment"><% b.title %></span>
-      </div>
+      <!--<div class="title-box">-->
+        <div class="title-comment"><%= b.title %></div>
+      <!--</div>-->
     <% end %>
+    
+    
       
   </div>
   
   
-  <div class="body">Body</div>
+  <div class="body">
+    <p>Body</p>
+    
+    <% @books.each do |b| %>
+      <div class="body-comment"><%= b.body %></div>
+    <% end %>
+  </div>
+  
+  <div class="show">
+    <p>show</p>
+    <% @books.each do |b| %>
+      <div class="button"><%= link_to "show", book_path(b.id) %></div>
+    <% end %>
+  </div>
+  
+  <div class="edit">
+    <P>edit</P>
+    <% @books.each do |b| %>
+      <div class="button"><%= link_to "edit", edit_book_path(b.id) %></div>
+    <% end %>
+    
+  </div>
+  
+  <div class="destroy">
+    <p>destroy</p>
+  </div>
   
   
 </div>
 
-<h3 class="New">New book</h3>
+<div class="New">
+  
+  <h3 class="New-title">New book</h3>
 
-<div class="new-box">
-  <%= form_with model: @books.new do |f| %>
-    <p>Title</p>
-    <%= f.text_field :title %>
+  <div class="new-box">
+    <%= form_with model: Book.new do |f| %>
+   
+      <p>Title</p>
+      <%= f.text_field :title %>
+      <p>Body</p>
+      <%= f.text_area :body %>
+      <p></p>
+      <%= f.submit 'Create Book' %>
     
-    <p>Body</p>
-    <%= f.text_area :body %>
-    <p></p>
-    <%= f.submit 'Create Book' %>
-  <% end %>
+    <% end %>
+</div>
 </div>
