@@ -15,49 +15,47 @@
   margin-left: 40px;
 }
 
-.main{
-  margin:0 0;
-  display: flex;
-  flex-box:inline-block;
+table{
+  margin-top: 50px;
+  margin-left: 40px;
 }
 
 .title{
-  width: 180px;
-  margin-left: 40px;
+  width: 250px;
   text-align: center;
-  font-weight: bold;
-  background-color: red;
-}
-
-.title-box{
-  width: 100px;
-  height: 30px;
-  background-color: pink;
-}
-
-.title-comment{
-  background-color: pink;
 }
 
 .body{
-  width: 400px;
+  width: 500px;
   text-align: center;
-  font-weight: bold;
-  background-color: blue;
 }
 
 .show{
-  margin: 0 20px;
+  width: 60px;
+  text-align: center;
 }
 
 .edit{
-  margin-right: 20px;
-  background-color: red;
+  width: 60px;
+  text-align: center;
+}
+
+.destroy{
+  width: 100px;
+  text-align: center;
+}
+
+.title-text{
+  text-align: left;
+}
+
+.body-text{
+  text-align: left;
 }
 
 
 .New{
-  margin: 30px 0 50px 40px;
+  margin: 30px 0 30px 40px;
 }
 
 
@@ -69,4 +67,9 @@
 
 .button:hover{
   background-color: black;
+}
+
+// edit
+.edit-main{
+  margin: 40px;
 }

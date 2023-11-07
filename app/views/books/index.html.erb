@@ -1,50 +1,28 @@
 <h1 class="Books">Books</h1>
 
-<div class="main">
+<table class="table">
   
-  <div class="title">
-    
-    <P class="title-text">Title</P>
-    <% @books.each do |b| %>
-      <!--<div class="title-box">-->
-        <div class="title-comment"><%= b.title %></div>
-      <!--</div>-->
-    <% end %>
-    
-    
-      
-  </div>
+  <tr>
+    <th class="title">Title</th>
+    <th class="body">Body</th>
+    <th class="show"></th>
+    <th class="edit"></th>
+    <th class="destroy"></th>
+  </tr>
   
+  <% @books.each do |b| %>
+  <tr>
+    <td class="title-text"><%= b.title %></td>
+    <td class="body-text"><%= b.body %></td>
+    <td class="button show"><%= link_to "Show", book_path(b.id) %></td>
+    <td class="button edit"><%= link_to "Edit", edit_book_path(b.id) %></td>
+    <td class="button destroy"><%= link_to "Destroy", book_path(b.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+  </tr>
+ <% end %>
   
-  <div class="body">
-    <p>Body</p>
-    
-    <% @books.each do |b| %>
-      <div class="body-comment"><%= b.body %></div>
-    <% end %>
-  </div>
-  
-  <div class="show">
-    <p>show</p>
-    <% @books.each do |b| %>
-      <div class="button"><%= link_to "show", book_path(b.id) %></div>
-    <% end %>
-  </div>
-  
-  <div class="edit">
-    <P>edit</P>
-    <% @books.each do |b| %>
-      <div class="button"><%= link_to "edit", edit_book_path(b.id) %></div>
-    <% end %>
-    
-  </div>
-  
-  <div class="destroy">
-    <p>destroy</p>
-  </div>
-  
-  
-</div>
+</table>
+
+
 
 <div class="New">
   
@@ -61,5 +39,6 @@
       <%= f.submit 'Create Book' %>
     
     <% end %>
+</div>
 </div>
 </div>
