@@ -11,12 +11,47 @@
      a:hover { color:white; text-decoration:none }
  }
 
+.flash-message{
+  margin: 40px;
+  color: green;
+}
+
+
+.field_with_errors input,
+.field_with_errors textarea,
+.field_with_errors select {
+  border: solid 3px red;
+}
+
+.error-box{
+  width: 510px;
+  border: solid 2px red;
+  margin-bottom: 40px;
+  background-color: #cccccc;
+  position: relative;
+}
+
+.error-title{
+  width: 508px;
+  padding-left: 10px;
+  background-color: #db0f20;
+  color: white;
+  font-weight: bold;
+}
+
+
+.error-message{
+  margin-left: 40px;
+  font-size: 12px;
+}
+
 .Books{
+  margin-top: 40px;
   margin-left: 40px;
 }
 
 table{
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: 40px;
 }
 
@@ -58,6 +93,9 @@ table{
   margin: 30px 0 30px 40px;
 }
 
+.new-box{
+  height: 200px;
+}
 
 // show
 .show-contents{

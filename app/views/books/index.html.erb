@@ -1,3 +1,8 @@
+    <% flash.each do |message_type, message| %>
+      <div class="flash-message <%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+
 <h1 class="Books">Books</h1>
 
 <table class="table">
@@ -23,22 +28,21 @@
 </table>
 
 
-
 <div class="New">
   
   <h3 class="New-title">New book</h3>
-
+  <%= render 'error_message', model: @book %>
+  
   <div class="new-box">
-    <%= form_with model: Book.new do |f| %>
-   
+    
+    <%= form_with model: @book, url: '/books', method: :post do |f| %>
       <p>Title</p>
       <%= f.text_field :title %>
       <p>Body</p>
       <%= f.text_area :body %>
       <p></p>
       <%= f.submit 'Create Book' %>
-    
     <% end %>
-</div>
-</div>
+    
+  </div>
 </div>

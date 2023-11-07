@@ -1,9 +1,16 @@
+<% flash.each do |message_type, message| %>
+    <div class="flash-message <%= message_type %>"><%= message %></div>
+<% end %>
+<%= yield %>
+
 <div class="show-contents">
-  <p> <b>TItle:</b> <%= @book.title %></p>
+  
+  <p> <b>Title:</b> <%= @book.title %></p>
   </br>
   <p> <b>Body:</b> <%= @book.body %></p>
   </br>
   <span class="button"><%= link_to "Edit", edit_book_path %></span>
   <span>|</span>
   <span class="button"><%= link_to "Back", books_path %></span>
+  
 </div>
